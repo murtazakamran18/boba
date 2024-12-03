@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boba Simulator Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-area">
+    <h1>Boba Simulator</h1>
+    
+    <!-- Customer Area -->
+    <div id="customer-area">
+      <img id="customer" src="DALL_E-2024-10-29-23.19-removebg-preview.png" alt="Customer" />
+      <p id="customer-reaction">Customer is waiting...</p>
+    </div>
+
+    <!-- Order Instructions -->
+    <div id="order-area">
+      <h2>Order: <span id="order"></span></h2>
+    </div>
+
+    <!-- Ingredient Buttons -->
+    <div id="ingredients-area">
+      <button class="ingredient" onclick="addIngredient('boba')">Boba</button>
+      <button class="ingredient" onclick="addIngredient('milk')">Milk</button>
+      <button class="ingredient" onclick="addIngredient('ice')">Ice</button>
+      <button class="ingredient" onclick="addIngredient('sugar')">Sugar</button>
+    </div>
+
+    <!-- Game Info: Timer & Score -->
+    <div id="score-area">
+      <p>Time Left: <span id="time-left">40</span>s</p>
+      <p>Score: <span id="score">0</span></p>
+    </div>
+
+    <!-- Feedback Message -->
+    <div id="message"></div>
+
+    <!-- Restart Button -->
+    <div id="restart-button" style="display: none;" onclick="restartGame()">Restart</div>
+  </div>
+
+  <!-- Background Music & Sound Effects -->
+  <audio id="correct-sound" src="correct-sound.mp3" preload="auto"></audio>
+  <audio id="wrong-sound" src="wrong-sound.mp3" preload="auto"></audio>
+  <audio id="bg-music" src="background-music.mp3" loop="true" autoplay="true"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
